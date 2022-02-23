@@ -1,15 +1,14 @@
 ---
 framework: jest
-tier: medium
-postMerge: 
-  pattern: 
-    - "./test/*/*.test.js"
+preRun:
+     command:
+        - npm ci
 preMerge:
   pattern:
     - "./test/*/*.test.js"
-preRun:
-     command:
-        - npm install
+postMerge: 
+  pattern: 
+    - "./test/*/*.test.js"
 postRun:
      command:
         - node --version
