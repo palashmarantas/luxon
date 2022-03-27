@@ -1,5 +1,9 @@
 ---
 framework: jest
+blocklist:
+   - "test/zones/local.test.js"
+   - "test/datetime/zone.test.js"
+   - "test/datetime/tokenParse.test.js"
 preRun:
      command:
         - npm ci
